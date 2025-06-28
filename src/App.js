@@ -8,7 +8,7 @@ import { useGLTF } from '@react-three/drei';
 
 // Load and render the 3D model
 function Model() {
-  const gltf = useGLTF('/chair.glb'); // Make sure chair.glb is in /public
+  const gltf = useGLTF(process.env.PUBLIC_URL + '/chair.glb'); // Make sure chair.glb is in /public
   return (
     <primitive 
       object={gltf.scene} 
