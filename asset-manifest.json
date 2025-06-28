@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/zappar-repo/static/css/main.e6c13ad2.css",
-    "main.js": "/zappar-repo/static/js/main.c9e44730.js",
+    "main.js": "/zappar-repo/static/js/main.b1d8b70c.js",
     "static/js/20.d03a7cd7.chunk.js": "/zappar-repo/static/js/20.d03a7cd7.chunk.js",
     "static/js/453.1a06f979.chunk.js": "/zappar-repo/static/js/453.1a06f979.chunk.js",
     "static/media/zappar-cv.wasm": "/zappar-repo/static/media/zappar-cv.c85c7df8e3132b359723.wasm",
@@ -10,12 +10,12 @@
     "static/media/face_tracking_model.zbin": "/zappar-repo/static/media/face_tracking_model.482727c0e7dd40d73f5a.zbin",
     "index.html": "/zappar-repo/index.html",
     "main.e6c13ad2.css.map": "/zappar-repo/static/css/main.e6c13ad2.css.map",
-    "main.c9e44730.js.map": "/zappar-repo/static/js/main.c9e44730.js.map",
+    "main.b1d8b70c.js.map": "/zappar-repo/static/js/main.b1d8b70c.js.map",
     "20.d03a7cd7.chunk.js.map": "/zappar-repo/static/js/20.d03a7cd7.chunk.js.map",
     "453.1a06f979.chunk.js.map": "/zappar-repo/static/js/453.1a06f979.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.c9e44730.js"
+    "static/js/main.b1d8b70c.js"
   ]
 }
