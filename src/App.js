@@ -6,19 +6,23 @@ import {
 } from '@zappar/zappar-react-three-fiber';
 import { useGLTF } from '@react-three/drei';
 
-// Load 3D model
 function Model() {
   const gltf = useGLTF(process.env.PUBLIC_URL + '/chair.glb');
-  return <primitive object={gltf.scene} scale={[0.5, 0.5, 0.5]} />;
+  return (
+    <primitive 
+      object={gltf.scene} 
+      scale={[0.3, 0.3, 0.3]} 
+      position={[0, -0.5, 0]}
+    />
+  );
 }
 
 export default function App() {
   const trackerRef = useRef();
   const [placementMode, setPlacementMode] = useState(true);
 
-  // Handle screen tap
   const handleClick = () => {
-    setPlacementMode((prev) => !prev); // Toggle place/move
+    setPlacementMode((prev) => !prev);
   };
 
   return (
@@ -28,13 +32,13 @@ export default function App() {
         embed
         permissionsUI={false}
         loadingUI={false}
-        onClick={handleClick} // 🔥 Tap to place or move
+        splashScreen={false}
       >
         <ZapparCamera />
         <InstantTracker
           ref={trackerRef}
           placementMode={placementMode}
-          placementCameraOffset={[0, 0, -5]} // Optional offset
+          placementCameraOffset={[0, -1, -3]}
         >
           <Model />
         </InstantTracker>
@@ -46,16 +50,22 @@ export default function App() {
       <div
         style={{
           position: 'absolute',
-          bottom: '20px',
+          bottom: '40px',
           left: '50%',
           transform: 'translateX(-50%)',
-          padding: '12px 24px',
-          backgroundColor: 'rgba(0,0,0,0.7)',
+          padding: '15px 30px',
+          backgroundColor: 'rgba(0,0,0,0.8)',
           color: 'white',
-          borderRadius: '20px',
-          fontSize: '16px',
-          zIndex: 1000
+          borderRadius: '25px',
+          fontSize: '18px',
+          fontWeight: 'bold',
+          border: '2px solid white',
+          boxShadow: '0 4px 8px rgba(0,0,0,0.3)',
+          zIndex: 1000,
+          userSelect: 'none',
+          cursor: 'pointer'
         }}
+        onClick={handleClick}
       >
         Tap to {placementMode ? 'place' : 'move'} the object
       </div>
